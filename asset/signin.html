@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+  <script src="dist/all.min.js"></script>
+</head>
+<body class="bg-slate-200">
+  <div class="
+    grid 
+    h-screen 
+    place-items-center
+    hidden
+    lg:grid
+    xl:grid
+    ">
+    <div class="
+        transition-all
+        bg-white 
+        p-7 
+        min-w-[370px]
+        rounded-lg
+        shadow-lg
+        hover:shadow-sm
+        ">
+        <form>
+            <p class="text-3xl">
+                Masuk
+            </p>
+
+            <div class="flex flex-col mt-7 mb-7">
+                <label class="text-sm text-slate-600">
+                    <i class="fa fa-envelope"></i> 
+                    Email / Username
+                </label>
+
+                <input type="text"
+                    class="
+                    transition-all
+                    outline-none 
+                    px-1 py-1 
+                    border-b-[2px] 
+                    border-indigo-900             
+                    hover:border-indigo-600
+                    "
+                    name="email">
+
+                <div class="text-rose-600 text-[12px] mt-2 hidden">
+                    Data harus diisi
+                </div> 
+            </div>
+
+            <div class="flex flex-col mt-7 mb-7">
+                <label class="text-sm text-slate-600 flex flex-row justify-between">
+                    <div>
+                        <i class="fa fa-key"></i> 
+                        Password
+                    </div>
+                    <div id="see-password">
+                        <i class="fa fa-eye cursor-pointer"></i>
+                    </div>
+                </label>
+
+                <input type="password"
+                    class="
+                        transition-all
+                        outline-none 
+                        px-1 py-1 
+                        border-b-[2px] 
+                        border-indigo-900             
+                        hover:border-indigo-600
+                    "
+                    name="password">
+
+                <div class="text-rose-600 text-[12px] mt-2 hidden">
+                    Data harus diisi
+                </div> 
+            </div>
+
+            <div class="flex justify-center">
+                <button class="hover:bg-indigo-500
+                    transition-all 
+                    bg-indigo-900 
+                    px-8 
+                    py-2 
+                    text-white 
+                    text-sm 
+                    rounded-lg 
+                    hover:bg-indigo-500
+                "
+                id="submit-button">
+                    <i class="fa-solid fa-paper-plane"></i> Kirim
+                </button>
+            </div>
+        </form>
+    </div>
+  </div>  
+
+  <div class="
+    grid   
+    h-screen 
+    place-items-center
+    lg:hidden
+    xl:hidden
+  ">
+    <div class="
+        bg-none 
+        p-5 
+        min-w-[340px] 
+        text-center
+    ">
+        Mobile Not Supported
+    </div>
+  </div>
+
+<script>
+    document.getElementById("see-password").addEventListener("click",function(event){
+        let password = document.getElementsByName("password")[0];
+
+        let child = document.getElementById("see-password").firstElementChild;
+
+        if(password.attributes.type.value === "password"){
+            password.attributes.type.value = "text";
+            child.classList.remove("fa","fa-eye")
+            child.classList.add("fa","fa-eye-slash")
+        }else{
+            password.attributes.type.value = "password";
+            child.classList.add("fa","fa-eye")
+            child.classList.remove("fa","fa-eye-slash")
+        }
+    });
+
+    document.getElementById("submit-button").addEventListener("click",function(event){
+        event.preventDefault();
+
+        console.log("click");
+        
+        let email = document.getElementsByName("email")[0];
+
+        if(!email.value){
+            email.classList.remove("border-indigo-900");
+            email.classList.add("border-rose-600");
+
+            let invalidEmail = email.nextElementSibling
+            
+            invalidEmail.classList.remove("hidden");
+        }else{
+            email.classList.add("border-indigo-400");
+            email.classList.remove("border-rose-600");
+
+            let invalidEmail = email.nextElementSibling
+
+            invalidEmail.classList.add("hidden")
+        }
+
+            
+        let password = document.getElementsByName("password")[0];
+
+        if(!password.value){
+            password.classList.remove("border-indigo-900");
+            password.classList.add("border-rose-600");
+
+            let invalidPassword = password.nextElementSibling
+
+            invalidPassword.classList.remove("hidden");
+        }else{
+            password.classList.add("border-indigo-400");
+            password.classList.remove("border-rose-600");
+
+            let invalidPassword = password.nextElementSibling
+
+            invalidPassword.classList.add("hidden")
+        }
+
+        if(password.value && email.value){
+            event.target.firstElementChild.classList.remove("fa-solid","fa-paper-plane")
+            event.target.firstElementChild.classList.add("fa","fa-spinner","fa-spin");
+
+            event.target.classList.remove("hover:bg-indigo-500","bg-indigo-900")
+            event.target.classList.add("bg-indigo-500");
+        }
+    });
+</script>
+</body>
+</html>
