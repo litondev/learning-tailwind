@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}","./asset/*.html"],
+  darkMode: 'class',
   theme: {
     extend: {
       gridTemplateRows: {      

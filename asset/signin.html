@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="dist/output.css" rel="stylesheet">
-  <script src="dist/all.min.js"></script>
 </head>
-<body class="bg-slate-200">
+<body class="
+    bg-slate-200
+    dark:bg-slate-900	
+    ">    
     <div class="
         grid 
         h-screen 
         place-items-center    
-        gap-1        
-        hidden
-        lg:grid
-        xl:grid        
-        ">
+        gap-1">
         <div>
             <img src="dist/logo.png" 
                 alt="..." 
@@ -32,19 +30,29 @@
         <div class="
             transition-all
             bg-white 
+            dark:bg-slate-800	
             p-7 
-            min-w-[370px]
+            min-w-[320px]    
+            xd:min-w-[370px]
+            lg:min-w-[370px]
             rounded-lg
             shadow-lg
             hover:shadow-sm
             ">
             <form autocomplete="off">
-                <p class="text-2xl">
+                <p class="
+                    text-2xl
+                    dark:text-white
+                ">
                     Masuk
                 </p>
 
                 <div class="flex flex-col mt-5 mb-5">
-                    <label class="text-sm text-slate-600">
+                    <label class="
+                        text-sm 
+                        text-slate-600 
+                        dark:text-white
+                    ">
                         <i class="fa fa-envelope"></i> 
                         Email / Username
                     </label>
@@ -60,6 +68,8 @@
                         text-sm          
                         hover:border-indigo-400
                         focus:border-indigo-400
+                        dark:bg-slate-600
+                        dark:text-white
                         "
                         name="email"
                         tabindex="1">
@@ -78,6 +88,7 @@
                     <label class="
                         text-sm 
                         text-slate-600 
+                        dark:text-white
                         flex 
                         flex-row 
                         justify-between
@@ -117,6 +128,8 @@
                             text-sm
                             hover:border-indigo-400
                             focus:border-indigo-400
+                            dark:bg-slate-600
+                            dark:text-white
                         "
                         name="password"
                         tabindex="2">
@@ -171,7 +184,7 @@
         </div>
     </div>  
 
-    <div class="
+    <!-- <div class="
         grid   
         h-screen 
         place-items-center        
@@ -186,7 +199,7 @@
         ">
             Mobile Not Supported
         </div>
-    </div>
+    </div> -->
 
     <script>
         document.getElementById("see-password").addEventListener("click",function(event){
@@ -256,5 +269,9 @@
             }
         });
     </script>
+
+    <script src="dist/all.min.js"></script>
+
+    <script src="dist/set-mode-theme.js"></script>
 </body>
 </html>
