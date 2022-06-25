@@ -5,201 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="dist/output.css" rel="stylesheet">
 </head>
-<body class="
-    bg-slate-200
-    dark:bg-slate-900	
-    ">    
-    <div class="
-        grid 
-        h-screen 
-        place-items-center    
-        gap-1">
-        <div>
+<body class="bg-slate-200 dark:bg-slate-900	">    
+    <div class="grid place-items-center gap-1 h-screen">
+        <div class="text-center">
             <img src="dist/logo.png" 
-                alt="..." 
-                class="
-                    shadow-lg 
-                    rounded-full 
-                    max-w-[100px] 
-                    h-auto 
-                    align-middle 
-                    border-none" 
-                />
+                alt="Logo" 
+                class="shadow-lg rounded-full max-w-[100px] h-auto border-none"/>
         </div>
 
-        <div class="
-            transition-all
-            bg-white 
-            dark:bg-slate-800	
-            p-7 
-            min-w-[320px]    
-            xd:min-w-[370px]
-            lg:min-w-[370px]
-            rounded-lg
-            shadow-lg
-            hover:shadow-sm
-            ">
+        <div class="transition-all bg-white dark:bg-slate-800 p-7 min-w-[320px] xl:min-w-[370px] lg:min-w-[370px] rounded-lg shadow-lg hover:shadow-sm">
             <form autocomplete="off">
-                <p class="
-                    text-2xl
-                    dark:text-white
-                ">
+                <p class="text-2xl dark:text-white">
                     Masuk
                 </p>
 
                 <div class="flex flex-col mt-5 mb-5">
-                    <label class="
-                        text-sm 
-                        text-slate-600 
-                        dark:text-white
-                    ">
+                    <label class="text-sm text-slate-600 dark:text-white">
                         <i class="fa fa-envelope"></i> 
                         Email / Username
                     </label>
 
                     <input type="text"
-                        class="
-                        transition-all
-                        outline-none 
-                        px-1 
-                        py-1 
-                        border-b-[2px] 
-                        border-indigo-900   
-                        text-sm          
-                        hover:border-indigo-400
-                        focus:border-indigo-400
-                        dark:bg-slate-600
-                        dark:text-white
-                        "
+                        class="transition-all outline-none px-1 py-1 border-b-[2px] border-indigo-900 text-sm hover:border-indigo-400 focus:border-indigo-400 dark:bg-slate-600 dark:text-white"
                         name="email"
                         tabindex="1">
 
-                    <div class="
-                        text-rose-600 
-                        text-[12px] 
-                        mt-2 
-                        hidden
-                    ">
+                    <div class="text-rose-600 text-[12px] mt-2 hidden">
                         Data harus diisi
                     </div> 
                 </div>
 
                 <div class="flex flex-col mt-5 mb-5">
-                    <label class="
-                        text-sm 
-                        text-slate-600 
-                        dark:text-white
-                        flex 
-                        flex-row 
-                        justify-between
-                    ">
+                    <label class="text-sm text-slate-600 dark:text-white flex flex-row justify-between">
                         <div>
                             <i class="fa fa-key"></i> 
                             Password
                         </div>
                         <div id="see-password" class="group">
                             <i class="transition-all fa fa-eye cursor-pointer hover:text-rose-500"></i>                            
-                            <span class="                            
-                                absolute 
-                                z-50 
-                                hidden 
-                                p-3
-                                px-6 
-                                py-2 
-                                -mt-16 
-                                -ml-16
-                                text-center 
-                                bg-black	
-                                text-white
-                                rounded 
-                                group-hover:block">
+                            <span class="absolute z-50 hidden p-3 px-6 py-2 -mt-16 -ml-16 text-center bg-black text-white rounded group-hover:block text-[12px]">
                                 Lihat Password
                             </span>
                         </div>
                     </label>
 
                     <input type="password"
-                        class="
-                            transition-all
-                            outline-none 
-                            px-1 py-1 
-                            border-b-[2px] 
-                            border-indigo-900             
-                            text-sm
-                            hover:border-indigo-400
-                            focus:border-indigo-400
-                            dark:bg-slate-600
-                            dark:text-white
-                        "
+                        class="transition-all outline-none px-1 py-1 border-b-[2px] border-indigo-900 text-sm hover:border-indigo-400 focus:border-indigo-400 dark:bg-slate-600 dark:text-white"
                         name="password"
                         tabindex="2">
 
-                    <div class="
-                        text-rose-600 
-                        text-[12px] 
-                        mt-2 
-                        hidden
-                    ">
+                    <div class="text-rose-600 text-[12px] mt-2 hidden">
                         Data harus diisi
                     </div> 
                 </div>
 
                 <div class="flex justify-center mt-5 mb-5">
-                    <button class="
-                        transition-all 
-                        bg-indigo-900 
-                        outline-none
-                        px-8 
-                        py-2 
-                        text-white 
-                        text-sm 
-                        rounded-lg 
-                        hover:bg-indigo-500
-                        focus:bg-indigo-500
-                    "
-                    id="submit-button"
-                    tabindex="3">
+                    <button class="transition-all bg-indigo-900 outline-none px-8 py-2 text-white text-sm rounded-lg hover:bg-indigo-500 focus:bg-indigo-500"
+                        id="submit-button"
+                        tabindex="3">
                         <i class="fa-solid fa-paper-plane"></i> Kirim                    
                     </button>                    
                 </div>
 
                 <div>
                     <a href="signup.html"
-                        class="
-                            outline-none 
-                            text-sm 
-                            text-blue-600
-                            focus:text-blue-400
-                        "
-                        tabindex="-1">Belum Punya akun</a>                    
+                        class="outline-none text-sm text-blue-600 focus:text-blue-400"
+                        tabindex="-1">
+                        Belum Punya akun
+                    </a>                    
                 </div>
             </form>
         </div>
 
-        <div class="
-            text-sm 
-            text-slate-600
-        ">
+        <div class="text-sm text-slate-600">
             Developed by anabasoftware
         </div>
     </div>  
 
-    <!-- <div class="
-        grid   
-        h-screen 
-        place-items-center        
-        lg:hidden
-        xl:hidden
-    ">
-        <div class="
-            bg-none 
-            p-5 
-            min-w-[340px] 
-            text-center
-        ">
+    <!-- 
+    <div class="grid place-items-center h-full lg:hidden xl:hidden">
+        <div class="bg-none p-5 min-w-[340px] text-center">
             Mobile Not Supported
         </div>
-    </div> -->
+    </div>  
+    -->
 
     <script>
         document.getElementById("see-password").addEventListener("click",function(event){
@@ -209,10 +98,12 @@
 
             if(password.attributes.type.value === "password"){
                 password.attributes.type.value = "text";
+
                 child.classList.remove("fa","fa-eye")
                 child.classList.add("fa","fa-eye-slash")
             }else{
                 password.attributes.type.value = "password";
+
                 child.classList.add("fa","fa-eye")
                 child.classList.remove("fa","fa-eye-slash")
             }
@@ -220,8 +111,6 @@
 
         document.getElementById("submit-button").addEventListener("click",function(event){
             event.preventDefault();
-
-            console.log("click");
             
             let email = document.getElementsByName("email")[0];
 
