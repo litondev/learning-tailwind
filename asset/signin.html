@@ -270,8 +270,14 @@
         });
     </script>
 
-    <script src="dist/all.min.js"></script>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')   
+        }
+    </script>
 
-    <script src="dist/set-mode-theme.js"></script>
+    <script src="dist/all.min.js"></script>
 </body>
 </html>

@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="dist/output.css" rel="stylesheet">
-  <script src="dist/all.min.js"></script>
 </head>
 <body class="
   bg-slate-200
@@ -17,31 +16,36 @@
     h-screen
   ">
     <div class="
-    bg-red-500 
+    bg-white    
     row-span-full
     col-span-2
     hidden
+    shdow-lg
+    shadow-slate-100	
+    z-100
+    dark:bg-slate-900
     xl:block
-    lg:block">
-      <div>
+    lg:block"
+    id="navbar">
+      <div class="dark:text-white">
         Logo 
       </div>      
     </div>
 
     <div class="
-      bg-blue-200 
       row-span-full 
       col-span-10 
       flex 
-      flex-col">
+      flex-col"
+      id="content">
       <nav class="
-        bg-white 
-        dark:bg-black
+        bg-neutral-50 
+        dark:bg-slate-800
         px-2 
         sm:px-4
         py-2.5       
         z-50          
-      ">
+      " id="nav">
         <div class="
           container 
           flex 
@@ -56,11 +60,14 @@
             hidden 
             xl:block 
             lg:block
-          ">
+          "
+            id="minimize-menu">
             <i class="              
               fa-solid 
               fa-align-left 
-              cursor-pointer">
+              cursor-pointer
+              dark:text-slate-200
+              ">
             </i>
           </a>
 
@@ -70,49 +77,78 @@
             ml-auto 
             md:order-2
           ">
-              <button type="button" 
-                class="
-                  flex 
-                  mr-3 
-                  text-sm 
-                  bg-gray-800 
-                  rounded-full 
-                  md:mr-0 
-                  focus:ring-4 
-                  focus:ring-gray-300 
-                  dark:focus:ring-gray-600" 
-                  id="user-menu-button" 
-                  aria-expanded="false" 
-                  type="button" 
-                  data-dropdown-toggle="dropdown">
-                  <span class="sr-only">
-                    Open user menu
-                  </span>
-                <img class="w-8 h-8 rounded-full" 
-                  src="/docs/images/people/profile-picture-3.jpg" 
-                  alt="user photo">
-              </button>
+              <button type="button"
+                id="theme-mode"
+                class="focus:outline-none">
+                <i class="
+                  fa 
+                  fa-moon
+                  dark:text-slate-200
+                "></i>
+              </button>          
 
-              <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
-                <div class="py-3 px-4">
-                  <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                  <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+              <div class="group inline-block relative">
+                <button type="button" 
+                  class="
+                    flex 
+                    ml-3
+                    mr-3 
+                    text-sm 
+                    bg-gray-800 
+                    rounded-full 
+                    md:mr-0 
+                    focus:ring-4 
+                    focus:ring-gray-300 
+                    dark:focus:ring-gray-600" 
+                    id="nav-menu" 
+                    type="button">
+                    <span class="sr-only">
+                      Open user menu
+                    </span>
+                    <img class="w-8 h-8 rounded-full" 
+                      src="dist/profil.png" 
+                      alt="profil">
+                </button>
+            
+                <div class="
+                  hidden 
+                  z-50 
+                  my-4 
+                  text-base 
+                  list-none 
+                  bg-white 
+                  rounded 
+                  divide-y 
+                  divide-gray-100 
+                  shadow 
+                  dark:bg-gray-700 
+                  dark:divide-gray-600
+                  group-hover:block
+                  absolute
+                  right-0
+                  top-[20px]"                         
+                  id="nav-dropdown">
+                  <div class="py-3 px-4">
+                    <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                    <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                  </div>
+                  <ul class="py-1" aria-labelledby="dropdown">
+                    <li>
+                      <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="py-1" aria-labelledby="dropdown">
-                  <li>
-                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-                  </li>
-                </ul>
               </div>
+
 
               <button 
                 data-collapse-toggle="mobile-menu-2" 
@@ -148,12 +184,107 @@
       </nav> 
 
       <div class="
-        bg-yellow-500 
+        bg-slate-100 
         flex-grow
-      ">
-        Content
+        p-5
+        dark:bg-slate-800
+      "
+      id="body">
+        <div class="
+          w-auto
+          bg-white
+          rounded
+          p-5
+          dark:bg-slate-900
+          dark:text-white
+        ">
+          Testing
+        </div>
       </div>
     </div>  
   </div>
+
+  <script>
+    // document.getElementById("nav-menu").addEventListener("click",function(event){
+    //   document.getElementById("nav-dropdown").classList.remove("hidden");
+    // });
+
+    document.getElementById("theme-mode").addEventListener("click",function(event){
+      let themeMode = document.getElementById("theme-mode");
+      let icon = themeMode.firstElementChild;
+
+      if(icon.classList.contains('fa-moon')){
+        localStorage.setItem("theme",'light');
+
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        
+        document.documentElement.classList.remove('dark')
+      }else{
+        localStorage.setItem('theme','dark');
+
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+
+        document.documentElement.classList.add('dark')
+      }
+    });
+
+    document.getElementById("minimize-menu").addEventListener('click',function(event){
+      if(document.getElementById("navbar").classList.contains("col-span-1")){
+        localStorage.setItem("minimize-menu","no");
+
+        let navbar =  document.getElementById("navbar");
+        navbar.classList.remove("col-span-1")
+        navbar.classList.add("col-span-2");
+
+        let content = document.getElementById("content");
+        content.classList.remove("col-span-11")
+        content.classList.add("col-span-10")
+      }else{
+        let navbar =  document.getElementById("navbar");
+        navbar.classList.remove("col-span-2")
+        navbar.classList.add("col-span-1");
+
+        let content = document.getElementById("content");
+        content.classList.remove("col-span-10")
+        content.classList.add("col-span-11")
+
+        localStorage.setItem("minimize-menu","yes");
+      }
+    })
+
+    if(localStorage.getItem("minimize-menu") && localStorage.getItem("minimize-menu") === "yes"){
+      let navbar = document.getElementById("navbar");
+      navbar.classList.remove("col-span-2")
+      navbar.classList.add("col-span-1");
+
+      let content = document.getElementById("content");
+      content.classList.remove("col-span-10")
+      content.classList.add("col-span-11")
+    }
+  </script>
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+
+        let themeMode = document.getElementById("theme-mode");
+        let icon = themeMode.firstElementChild;
+
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    } else {
+        document.documentElement.classList.remove('dark')   
+
+        let themeMode = document.getElementById("theme-mode");
+        let icon = themeMode.firstElementChild;
+
+        icon.classList.add('fa-sun');
+        icon.classList.remove('fa-moon');
+    }
+  </script>
+
+  <script src="dist/all.min.js"></script>
 </body>
 </html>

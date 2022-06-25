@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.66268448"
-     inkscape:cx="5573.5423"
-     inkscape:cy="-2968.9846"
+     inkscape:zoom="0.08283556"
+     inkscape:cx="4092.4453"
+     inkscape:cy="1128.7423"
      inkscape:window-width="1360"
      inkscape:window-height="703"
      inkscape:window-x="0"
@@ -693,5 +693,12 @@
              y="-761.56647">Product</tspan></text>
       </g>
     </g>
+    <rect
+       style="fill:#000000;stroke-width:0.264583;fill-opacity:1"
+       id="rect405"
+       width="480.52603"
+       height="571.34216"
+       x="309.53696"
+       y="-99.677628" />
   </g>
 </svg>
