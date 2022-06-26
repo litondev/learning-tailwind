@@ -604,10 +604,6 @@ video {
   border-width: 0;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -616,16 +612,16 @@ video {
   position: relative;
 }
 
-.top-\[50px\] {
-  top: 50px;
-}
-
 .right-0 {
   right: 0px;
 }
 
 .top-\[30px\] {
   top: 30px;
+}
+
+.top-\[50px\] {
+  top: 50px;
 }
 
 .z-50 {

@@ -7,7 +7,6 @@
 </head>
 <body>
   <div class="grid grid-rows-6 grid-cols-12 w-full min-h-screen">
-
     <div class="bg-white row-span-full col-span-2 hidden shdow-lg shadow-slate-100 z-100 dark:bg-slate-900 xl:block lg:block py-6"
       id="navbar">
       <div class="dark:text-white flex flex-col gap-2 px-2">
@@ -254,94 +253,17 @@
       <div class="bg-slate-100 flex-grow p-5 dark:bg-slate-800"
         id="body">
         <div class="w-auto bg-white rounded p-5 dark:bg-slate-900 dark:text-white">         
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
-          Testing <br/>        
+          Testing
         </div>
       </div>
     </div>  
 
   </div>
 
-  <script>
+ <script>
     document.getElementById("mobile-menu").addEventListener("click",function(event){
+      let mobileMenu = document.getElementById("mobile-menu");
+            
       localStorage.setItem("minimize-menu","no");
 
       let navbar =  document.getElementById("navbar");
@@ -394,9 +316,23 @@
       if(navbar.classList.contains('absolute')){
         navbar.classList.add('hidden','row-span-full','col-span-2','xl:block','lg:block');
         navbar.classList.remove('absolute','top-[50px]','w-full');
-      }else{
+
+        let menuIcons = mobileMenu.getElementsByClassName('fa-x');
+
+        if(menuIcons.length){
+          menuIcons[0].classList.add('fa-align-left');
+          menuIcons[0].classList.remove('fa-x');
+        }
+      }else{        
         navbar.classList.remove('hidden','row-span-full','col-span-2','xl:block','lg:block');
         navbar.classList.add('absolute','top-[50px]','w-full');
+
+        let menuIcons = mobileMenu.getElementsByClassName('fa-align-left');
+
+        if(menuIcons.length){
+          menuIcons[0].classList.add('fa-x');
+          menuIcons[0].classList.remove('fa-align-left');
+        }
       }
     });
 
@@ -423,9 +359,18 @@
 
     document.getElementById("minimize-menu").addEventListener('click',function(event){
       if(document.getElementById("navbar").classList.contains("col-span-1")){
+        let minimizeMenu = document.getElementById("minimize-menu");
+
+        let menuIcons = minimizeMenu.getElementsByClassName('fa-x');
+
+        if(menuIcons.length){
+          menuIcons[0].classList.add('fa-align-left');
+          menuIcons[0].classList.remove('fa-x');
+        }
+
         localStorage.setItem("minimize-menu","no");
 
-        let navbar =  document.getElementById("navbar");
+        let navbar = document.getElementById("navbar");
         navbar.classList.remove("col-span-1")
         navbar.classList.add("col-span-2");
 
@@ -471,7 +416,18 @@
             elementListPx.classList.remove("px-4");
           });
         })
+
+        
       }else{
+        let minimizeMenu = document.getElementById("minimize-menu");
+
+        let menuIcons = minimizeMenu.getElementsByClassName('fa-align-left');
+
+        if(menuIcons.length){
+          menuIcons[0].classList.add('fa-x');
+          menuIcons[0].classList.remove('fa-align-left');
+        }
+
         let navbar =  document.getElementById("navbar");
         navbar.classList.remove("col-span-2")
         navbar.classList.add("col-span-1");
@@ -534,6 +490,7 @@
           child.classList.remove('hidden');
 
           let caretIcons = this.getElementsByClassName('fa-caret-right');
+
           if(caretIcons.length){
             caretIcons[0].classList.add('fa-caret-down');
             caretIcons[0].classList.remove('fa-caret-right');
@@ -543,6 +500,7 @@
           child.classList.add('hidden');
           
           let caretIcons = this.getElementsByClassName('fa-caret-down');
+
           if(caretIcons.length){
             caretIcons[0].classList.add('fa-caret-right');
             caretIcons[0].classList.remove('fa-caret-down');
@@ -553,7 +511,19 @@
  </script>
 
   <script>
-     if(localStorage.getItem("minimize-menu") && localStorage.getItem("minimize-menu") === "yes"){
+    if(
+      localStorage.getItem("minimize-menu") && 
+      localStorage.getItem("minimize-menu") === "yes"
+    ){
+      let minimizeMenu = document.getElementById("minimize-menu");
+
+      let menuIcons = minimizeMenu.getElementsByClassName('fa-align-left');
+
+      if(menuIcons.length){
+        menuIcons[0].classList.add('fa-x');
+        menuIcons[0].classList.remove('fa-align-left');
+      }
+
       let navbar = document.getElementById("navbar");
       navbar.classList.remove("col-span-2")
       navbar.classList.add("col-span-1");
@@ -604,8 +574,11 @@
 
     if (
       localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+      (
+        !('theme' in localStorage) && 
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      )
+    ){
         document.documentElement.classList.add('dark')
 
         let themeMode = document.getElementById("theme-mode");
@@ -613,10 +586,10 @@
 
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
-    } else {
+    }else{
         document.documentElement.classList.remove('dark')   
 
-        let themeMode = document.getElementById("theme-mode");
+        let themeMode = document.getElementById("theme-mode");                        
         let icon = themeMode.firstElementChild;
 
         icon.classList.add('fa-sun');

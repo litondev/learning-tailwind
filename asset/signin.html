@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-slate-200 dark:bg-slate-900	">    
+<body class="bg-slate-200 dark:bg-slate-900">    
     <div class="grid place-items-center gap-1 h-screen">
         <div class="text-center">
             <img src="dist/logo.png" 
@@ -83,7 +83,7 @@
     </div>  
 
     <!-- 
-    <div class="grid place-items-center h-full lg:hidden xl:hidden">
+    <div class="grid place-items-center h-screen lg:hidden xl:hidden">
         <div class="bg-none p-5 min-w-[340px] text-center">
             Mobile Not Supported
         </div>
@@ -114,18 +114,16 @@
             
             let email = document.getElementsByName("email")[0];
 
+            let invalidEmail = email.nextElementSibling
+
             if(!email.value){
                 email.classList.remove("border-indigo-900");
                 email.classList.add("border-rose-600");
-
-                let invalidEmail = email.nextElementSibling
                 
                 invalidEmail.classList.remove("hidden");
             }else{
                 email.classList.add("border-indigo-400");
                 email.classList.remove("border-rose-600");
-
-                let invalidEmail = email.nextElementSibling
 
                 invalidEmail.classList.add("hidden")
             }
@@ -133,25 +131,25 @@
                 
             let password = document.getElementsByName("password")[0];
 
+            let invalidPassword = password.nextElementSibling
+
             if(!password.value){
                 password.classList.remove("border-indigo-900");
                 password.classList.add("border-rose-600");
-
-                let invalidPassword = password.nextElementSibling
 
                 invalidPassword.classList.remove("hidden");
             }else{
                 password.classList.add("border-indigo-400");
                 password.classList.remove("border-rose-600");
 
-                let invalidPassword = password.nextElementSibling
-
                 invalidPassword.classList.add("hidden")
             }
 
             if(password.value && email.value){
-                event.target.firstElementChild.classList.remove("fa-solid","fa-paper-plane")
-                event.target.firstElementChild.classList.add("fa","fa-spinner","fa-spin");
+                let iconElement =  event.target.firstElementChild;
+
+                iconElement.classList.remove("fa-solid","fa-paper-plane")
+                iconElement.classList.add("fa","fa-spinner","fa-spin");
 
                 event.target.classList.remove("hover:bg-indigo-500","bg-indigo-900")
                 event.target.classList.add("bg-indigo-500");
@@ -160,7 +158,13 @@
     </script>
 
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (
+            localStorage.theme === 'dark' || 
+            (
+                !('theme' in localStorage) && 
+                window.matchMedia('(prefers-color-scheme: dark)').matches
+            )
+        ) {
             document.documentElement.classList.add('dark')
         } else {
             document.documentElement.classList.remove('dark')   
