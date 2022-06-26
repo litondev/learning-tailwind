@@ -105,19 +105,19 @@
           
             <ul class="hidden absolute top-[110px] bg-white shadow-lg group-hover:block child-menu">
                 <li class="mt-2 mb-2">
-                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px] focus:dark:text-white">            
                     Stock Mutasi
                   </a>
                 </li>      
                 <li class="mt-2 mb-2">
-                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px] focus:dark:text-white">            
                     Kirim Barang Ke Produksi
                   </a>
                 </li> 
             </ul>
           </li> 
 
-          <li
+          <!-- <li
             class="group">
             <a href="#" 
               class="py-2 px-4 min-w-[100px] text-slate-500 block  hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 focus:dark:bg-gray-600 focus:bg-gray-200 outline-none">        
@@ -129,17 +129,17 @@
           
             <ul class="hidden absolute top-[110px] bg-white shadow-lg group-hover:block child-menu">
                 <li class="mt-2 mb-2">
-                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
                     Stock Mutasi
                   </a>
                 </li>      
                 <li class="mt-2 mb-2">
-                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
                     Kirim Barang Ke Produksi
                   </a>
                 </li> 
             </ul>
-          </li> 
+          </li>  -->
         
           <li>
             <a href="#" 
@@ -185,7 +185,14 @@
         let childMenus = navbar.querySelectorAll(".child-menu");
 
         Array.from(childMenus).forEach(function(element){
-          element.classList.add("absolute","shadow-lg");
+          element.classList.add("absolute","shadow-lg",'bg-white');
+
+          let links = element.querySelectorAll("a");
+
+          Array.from(links).forEach(function(elementLink){
+            elementLink.classList.add("dark:text-black");
+            elementLink.classList.remove("dark:text-white");
+          })
         })
 
         let menuIcons = mobileMenu.getElementsByClassName('fa-x');
@@ -201,7 +208,14 @@
         let childMenus = navbar.querySelectorAll(".child-menu");
 
         Array.from(childMenus).forEach(function(element){
-          element.classList.remove("absolute","shadow-lg");
+          element.classList.remove("absolute","shadow-lg",'bg-white');
+
+          let links = element.querySelectorAll("a");
+
+          Array.from(links).forEach(function(elementLink){
+            elementLink.classList.remove("dark:text-black");
+            elementLink.classList.add("dark:text-white");
+          })
         })
 
         let menuIcons = mobileMenu.getElementsByClassName('fa-align-right');
