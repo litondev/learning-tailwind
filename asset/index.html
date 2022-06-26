@@ -341,6 +341,18 @@
   </div>
 
   <script>
+    document.getElementById("mobile-menu").addEventListener("click",function(event){
+      let navbar = document.getElementById("navbar");
+
+      if(navbar.classList.contains('absolute')){
+        navbar.classList.add('hidden','row-span-full','col-span-2','xl:block','lg:block');
+        navbar.classList.remove('absolute','top-[50px]','w-full');
+      }else{
+        navbar.classList.remove('hidden','row-span-full','col-span-2','xl:block','lg:block');
+        navbar.classList.add('absolute','top-[50px]','w-full');
+      }
+    });
+
     document.getElementById("theme-mode").addEventListener("click",function(event){
       let themeMode = document.getElementById("theme-mode");
       let icon = themeMode.firstElementChild;
@@ -506,9 +518,12 @@
       navbar.classList.remove("col-span-2")
       navbar.classList.add("col-span-1");
 
-      let content = document.getElementById("content");
-      content.classList.remove("col-span-10")
-      content.classList.add("col-span-11")
+      let content = document.getElementById("content");  
+      content.classList.remove("xl:col-span-10")
+      content.classList.add("xl:col-span-11")
+
+      content.classList.remove("lg:col-span-10")
+      content.classList.add("lg:col-span-11")
 
       let addHiddenClass = function(element) {
         element.classList.add("hidden");
