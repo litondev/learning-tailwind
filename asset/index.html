@@ -21,14 +21,152 @@
         </div>
       </div>          
 
-      <div class="overflow-y-auto">
-        <ul>
-          <li>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">            
-              <i class="fa fa-th"></i>
-              <span class="text-sm">Home</span>              
+      <div class="overflow-y-auto mt-4">
+        <ul id="list-menu">
+          <!-- HOME -->
+            <li class="mt-4 menu-dropdown"
+              data-target="menu-child-1">
+              <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 flex flex-row">            
+                <div class="flex-grow">
+                  <i class="fa fa-home text-icon"></i>
+                  <span class="text-[12px] text-title">Home</span>              
+                </div>
+
+                <div>
+                  <i class="fa fa-caret-right"></i>
+                </div>
+              </a>          
+            </li> 
+            
+            <li class="hidden list-dropdown"   
+              data-active="false"
+              id="menu-child-1">
+              <ul>
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Stock Mutasi
+                  </a>
+                </li>      
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Kirim Barang Ke Produksi
+                  </a>
+                  <hr class="border-1 border-gray-200 dark:border-gray-800" />
+                </li> 
+              </ul>
+            </li>
+          <!-- HOME -->
+
+          <!-- PRODUCT -->
+            <li class="mt-4 menu-dropdown"
+              data-target="menu-child-2">
+              <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 flex flex-row">            
+                <div class="flex-grow">
+                  <i class="fa fa-list text-icon"></i>
+                  <span class="text-[12px] text-title">Product</span>              
+                </div>
+
+                <div>
+                  <i class="fa fa-caret-right"></i>
+                </div>
+              </a>          
+            </li> 
+            
+            <li class="hidden list-dropdown"   
+              data-active="false"
+              id="menu-child-2">
+              <ul>
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Product 1
+                  </a>
+                </li>      
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Product 2
+                  </a>
+                  <hr class="border-1 border-gray-200 dark:border-gray-800" />
+                </li> 
+              </ul>
+            </li> 
+          <!-- PRODUCT -->
+
+          <!-- PEMBELIAN -->
+            <li class="mt-4">
+              <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 flex flex-row">            
+                <div class="flex-grow">
+                  <i class="fa fa-dollar-sign text-icon"></i>
+                  <span class="text-[12px] text-title">Pembeliaan</span>              
+                </div>
+
+                <div>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+              </a>          
+            </li> 
+            
+            <li class="list-dropdown">
+              <ul>
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Pembeliaan 1
+                  </a>
+                </li>      
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Pembeliaan 2                      
+                  </a>
+                  <hr class="border-1 border-gray-200 dark:border-gray-800" />
+                </li> 
+              </ul>
+            </li> 
+          <!-- PEMBELIAN -->
+
+          <!-- PENJUALAAN -->
+            <li class="mt-4">
+              <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 flex flex-row">            
+                <div class="flex-grow">
+                  <i class="fa fa-box text-icon"></i>
+                  <span class="text-[12px] text-title">Penjualaan</span>              
+                </div>
+
+                <div>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+              </a>          
+            </li> 
+            
+            <li class="list-dropdown">
+              <ul>
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Penjualaan 1
+                  </a>
+                </li>      
+                <li class="mt-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Penjualaan 2
+                  </a>
+                  <hr class="border-1 border-gray-200 dark:border-gray-800" />
+                </li> 
+              </ul>
+            </li> 
+          <!-- PENJUALAAN -->
+
+        
+          <li class="mt-4">
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200">            
+              <i class="fa fa-users text-icon"></i>
+              <span class="text-[12px] text-title">User</span>              
             </a>
-          </li>                
+          </li>      
+
+          <li class="mt-4">
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200">            
+              <i class="fa fa-th text-icon"></i>
+              <span class="text-[12px] text-title">Role</span>              
+            </a>
+          </li>                  
         </ul>
       </div>
     </div>
@@ -156,6 +294,46 @@
         let content = document.getElementById("content");
         content.classList.remove("col-span-11")
         content.classList.add("col-span-10")
+
+
+        let removeHiddenClass = function(element) {
+          element.classList.remove("hidden");
+        };
+        
+        let listMenu = document.getElementById("list-menu");     
+
+        let listMenuTexts = listMenu.querySelectorAll(".text-title");
+
+        Array.from(listMenuTexts).forEach(removeHiddenClass);
+        
+        let listMenuCaretRights = listMenu.querySelectorAll(".fa-caret-right");
+
+        Array.from(listMenuCaretRights).forEach(removeHiddenClass);
+
+        let listMenuCaretDowns = listMenu.querySelectorAll(".fa-caret-down");
+
+        Array.from(listMenuCaretDowns).forEach(removeHiddenClass);
+
+        let listTextIcons = listMenu.querySelectorAll(".text-icon");
+
+        Array.from(listTextIcons).forEach(function(element){
+          let parent = element.parentElement;
+
+          parent.classList.remove("text-center");
+
+          element.classList.remove("fa-2x");
+        });             
+        
+        let listDropdowns = listMenu.querySelectorAll(".list-dropdown");
+      
+        Array.from(listDropdowns).forEach(function(element){
+          let listPx = element.querySelectorAll(".px-4");
+
+          Array.from(listPx).forEach(function(elementListPx){
+            elementListPx.classList.add("px-7")
+            elementListPx.classList.remove("px-4");
+          });
+        })
       }else{
         let navbar =  document.getElementById("navbar");
         navbar.classList.remove("col-span-2")
@@ -166,9 +344,76 @@
         content.classList.add("col-span-11")
 
         localStorage.setItem("minimize-menu","yes");
+
+        let addHiddenClass = function(element) {
+          element.classList.add("hidden");
+        };
+
+        let listMenu = document.getElementById("list-menu");     
+
+        let listMenuTexts = listMenu.querySelectorAll(".text-title");
+
+        Array.from(listMenuTexts).forEach(addHiddenClass);
+        
+        let listMenuCaretRights = listMenu.querySelectorAll(".fa-caret-right");
+
+        Array.from(listMenuCaretRights).forEach(addHiddenClass);
+
+        let listMenuCaretDowns = listMenu.querySelectorAll(".fa-caret-down");
+
+        Array.from(listMenuCaretDowns).forEach(addHiddenClass);
+
+        let listTextIcons = listMenu.querySelectorAll(".text-icon");
+
+        Array.from(listTextIcons).forEach(function(element){
+          let parent = element.parentElement;
+
+          parent.classList.add("text-center");
+
+          element.classList.add("fa-2x");
+        });             
+        
+        let listDropdowns = listMenu.querySelectorAll(".list-dropdown");
+      
+        Array.from(listDropdowns).forEach(function(element){
+          let listPx = element.querySelectorAll(".px-7");
+
+          Array.from(listPx).forEach(function(elementListPx){
+            elementListPx.classList.add("px-4");
+            elementListPx.classList.remove("px-7")
+          });
+        })
       }
     })   
-  </script>
+      
+    let menuDropdowns = document.getElementsByClassName("menu-dropdown");
+
+    Array.from(menuDropdowns).forEach(function(element) {
+      element.addEventListener('click',  function(event){
+        let child = document.getElementById(this.getAttribute('data-target'));
+
+        if(child.getAttribute('data-active') === 'false'){
+          child.setAttribute('data-active','true');
+          child.classList.remove('hidden');
+
+          let caretIcons = this.getElementsByClassName('fa-caret-right');
+          if(caretIcons.length){
+            caretIcons[0].classList.add('fa-caret-down');
+            caretIcons[0].classList.remove('fa-caret-right');
+          }
+        }else{
+          child.setAttribute('data-active','false');
+          child.classList.add('hidden');
+          
+          let caretIcons = this.getElementsByClassName('fa-caret-down');
+          if(caretIcons.length){
+            caretIcons[0].classList.add('fa-caret-right');
+            caretIcons[0].classList.remove('fa-caret-down');
+          }
+        }
+      });
+    });
+ </script>
 
   <script>
      if(localStorage.getItem("minimize-menu") && localStorage.getItem("minimize-menu") === "yes"){
@@ -179,6 +424,45 @@
       let content = document.getElementById("content");
       content.classList.remove("col-span-10")
       content.classList.add("col-span-11")
+
+      let addHiddenClass = function(element) {
+        element.classList.add("hidden");
+      };
+
+      let listMenu = document.getElementById("list-menu");     
+
+      let listMenuTexts = listMenu.querySelectorAll(".text-title");
+
+      Array.from(listMenuTexts).forEach(addHiddenClass);
+      
+      let listMenuCaretRights = listMenu.querySelectorAll(".fa-caret-right");
+
+      Array.from(listMenuCaretRights).forEach(addHiddenClass);
+
+      let listMenuCaretDowns = listMenu.querySelectorAll(".fa-caret-down");
+
+      Array.from(listMenuCaretDowns).forEach(addHiddenClass);
+
+      let listTextIcons = listMenu.querySelectorAll(".text-icon");
+
+      Array.from(listTextIcons).forEach(function(element){
+        let parent = element.parentElement;
+
+        parent.classList.add("text-center");
+
+        element.classList.add("fa-2x");
+      });             
+      
+      let listDropdowns = listMenu.querySelectorAll(".list-dropdown");
+    
+      Array.from(listDropdowns).forEach(function(element){
+        let listPx = element.querySelectorAll(".px-7");
+
+        Array.from(listPx).forEach(function(elementListPx){
+          elementListPx.classList.add("px-4");
+          elementListPx.classList.remove("px-7")
+        });
+      })
     }
 
     if (
