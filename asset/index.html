@@ -342,7 +342,54 @@
 
   <script>
     document.getElementById("mobile-menu").addEventListener("click",function(event){
-      let navbar = document.getElementById("navbar");
+      localStorage.setItem("minimize-menu","no");
+
+      let navbar =  document.getElementById("navbar");
+      navbar.classList.remove("col-span-1")
+      navbar.classList.add("col-span-2");
+
+      let content = document.getElementById("content");
+      content.classList.remove("xl:col-span-11","lg:col-span-11")
+      content.classList.add("xl:col-span-10","lg:col-span-10")    
+
+      let removeHiddenClass = function(element) {
+        element.classList.remove("hidden");
+      };
+
+      let listMenu = document.getElementById("list-menu");     
+
+      let listMenuTexts = listMenu.querySelectorAll(".text-title");
+
+      Array.from(listMenuTexts).forEach(removeHiddenClass);
+
+      let listMenuCaretRights = listMenu.querySelectorAll(".fa-caret-right");
+
+      Array.from(listMenuCaretRights).forEach(removeHiddenClass);
+
+      let listMenuCaretDowns = listMenu.querySelectorAll(".fa-caret-down");
+
+      Array.from(listMenuCaretDowns).forEach(removeHiddenClass);
+
+      let listTextIcons = listMenu.querySelectorAll(".text-icon");
+
+      Array.from(listTextIcons).forEach(function(element){
+        let parent = element.parentElement;
+
+        parent.classList.remove("text-center");
+
+        element.classList.remove("fa-2x");
+      });             
+
+      let listDropdowns = listMenu.querySelectorAll(".list-dropdown");
+
+      Array.from(listDropdowns).forEach(function(element){
+        let listPx = element.querySelectorAll(".px-4");
+
+        Array.from(listPx).forEach(function(elementListPx){
+          elementListPx.classList.add("px-7")
+          elementListPx.classList.remove("px-4");
+        });
+      })
 
       if(navbar.classList.contains('absolute')){
         navbar.classList.add('hidden','row-span-full','col-span-2','xl:block','lg:block');
@@ -383,11 +430,8 @@
         navbar.classList.add("col-span-2");
 
         let content = document.getElementById("content");
-        content.classList.remove("xl:col-span-11")
-        content.classList.add("xl:col-span-10")
-
-        content.classList.remove("lg:col-span-11")
-        content.classList.add("lg:col-span-10")
+        content.classList.remove("xl:col-span-11","lg:col-span-11")
+        content.classList.add("xl:col-span-10","lg:col-span-10")    
 
         let removeHiddenClass = function(element) {
           element.classList.remove("hidden");
@@ -433,12 +477,8 @@
         navbar.classList.add("col-span-1");
 
         let content = document.getElementById("content");
-        content.classList.remove("xl:col-span-10")
-        content.classList.add("xl:col-span-11")
-
-        content.classList.remove("lg:col-span-10")
-        content.classList.add("lg:col-span-11")
-
+        content.classList.remove("xl:col-span-10","lg:col-span-10")
+        content.classList.add("xl:col-span-11","lg:col-span-11")
 
         localStorage.setItem("minimize-menu","yes");
 
@@ -519,12 +559,9 @@
       navbar.classList.add("col-span-1");
 
       let content = document.getElementById("content");  
-      content.classList.remove("xl:col-span-10")
-      content.classList.add("xl:col-span-11")
-
-      content.classList.remove("lg:col-span-10")
-      content.classList.add("lg:col-span-11")
-
+      content.classList.remove("xl:col-span-10","lg:col-span-10")
+      content.classList.add("xl:col-span-11","lg:col-span-11")
+    
       let addHiddenClass = function(element) {
         element.classList.add("hidden");
       };
