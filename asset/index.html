@@ -152,7 +152,6 @@
               </ul>
             </li> 
           <!-- PENJUALAAN -->
-
         
           <li class="mt-4">
             <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200">            
@@ -171,7 +170,7 @@
       </div>
     </div>
 
-    <div class="row-span-full col-span-10 flex flex-col"
+    <div class="row-span-full col-span-full flex flex-col xl:col-span-10 lg:col-span-10"
       id="content">
       <div class="bg-neutral-50 dark:bg-slate-800 px-2 sm:px-4 py-2.5 z-50" 
         id="nav">
@@ -184,8 +183,18 @@
               Minimize Menu
             </span>
           </button>
+          
+          <button         
+            type="button" 
+            class="inline-flex items-center p-2 text-sm text-gray-500 md:hidden focus:ring-gray-200 dark:text-gray-400 dark:hover:text-indigo-400 focus:text-indigo-400 focus:dark:text-indigo-400 focus:outline-none focus:dark:outline-none"
+            id="mobile-menu">
+            <span class="sr-only">
+              Menu
+            </span>
+            <i class="fa fa-align-left fa-1x cursor-pointer"></i>
+          </button>
 
-          <div class="flex items-center ml-auto md:order-2 gap-6">
+          <div class="flex items-center ml-auto md:order-2 gap-6">          
             <button type="button"
               class="flex flex-col items-center focus:text-indigo-400 focus:outline-none dark:text-slate-200 hover:text-indigo-400 focus:dark:text-indigo-400 hover:dark:text-indigo-400"
               id="theme-mode"
@@ -237,16 +246,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-
-            <button         
-              type="button" 
-              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-              <span class="sr-only">
-                Main
-              </span>
-              <i class="fa-solid fa-menu cursor-pointer"></i>
-            </button>
+            </div>           
           </div>
         </div>
       </div> 
@@ -254,6 +254,85 @@
       <div class="bg-slate-100 flex-grow p-5 dark:bg-slate-800"
         id="body">
         <div class="w-auto bg-white rounded p-5 dark:bg-slate-900 dark:text-white">         
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
+          Testing <br/>        
           Testing <br/>        
         </div>
       </div>
@@ -292,9 +371,11 @@
         navbar.classList.add("col-span-2");
 
         let content = document.getElementById("content");
-        content.classList.remove("col-span-11")
-        content.classList.add("col-span-10")
+        content.classList.remove("xl:col-span-11")
+        content.classList.add("xl:col-span-10")
 
+        content.classList.remove("lg:col-span-11")
+        content.classList.add("lg:col-span-10")
 
         let removeHiddenClass = function(element) {
           element.classList.remove("hidden");
@@ -340,8 +421,12 @@
         navbar.classList.add("col-span-1");
 
         let content = document.getElementById("content");
-        content.classList.remove("col-span-10")
-        content.classList.add("col-span-11")
+        content.classList.remove("xl:col-span-10")
+        content.classList.add("xl:col-span-11")
+
+        content.classList.remove("lg:col-span-10")
+        content.classList.add("lg:col-span-11")
+
 
         localStorage.setItem("minimize-menu","yes");
 

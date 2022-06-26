@@ -620,10 +620,6 @@ video {
   top: 30px;
 }
 
-.left-\[10px\] {
-  left: 10px;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -642,6 +638,14 @@ video {
 
 .col-span-11 {
   grid-column: span 11 / span 11;
+}
+
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
+.col-span-full {
+  grid-column: 1 / -1;
 }
 
 .row-span-full {
@@ -1044,11 +1048,6 @@ video {
   padding-right: 2rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
 }
@@ -1303,12 +1302,22 @@ video {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:hover\:bg-indigo-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .dark .hover\:dark\:text-indigo-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(129 140 248 / var(--tw-text-opacity));
+}
+
+.dark .dark\:hover\:text-indigo-400:hover {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
 }
@@ -1323,12 +1332,25 @@ video {
   color: rgb(129 140 248 / var(--tw-text-opacity));
 }
 
+.dark .focus\:dark\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .dark .dark\:focus\:ring-gray-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-11 {
+    grid-column: span 11 / span 11;
+  }
+
+  .sm\:col-span-12 {
+    grid-column: span 12 / span 12;
+  }
+
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1338,6 +1360,14 @@ video {
 @media (min-width: 768px) {
   .md\:order-2 {
     order: 2;
+  }
+
+  .md\:col-span-12 {
+    grid-column: span 12 / span 12;
+  }
+
+  .md\:col-span-10 {
+    grid-column: span 10 / span 10;
   }
 
   .md\:mr-0 {
@@ -1350,6 +1380,18 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:col-span-full {
+    grid-column: 1 / -1;
+  }
+
+  .lg\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .lg\:col-span-11 {
+    grid-column: span 11 / span 11;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1364,6 +1406,18 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:col-span-full {
+    grid-column: 1 / -1;
+  }
+
+  .xl\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .xl\:col-span-11 {
+    grid-column: span 11 / span 11;
+  }
+
   .xl\:block {
     display: block;
   }
