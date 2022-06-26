@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body>
+  <div class="grid grid-rows-6 grid-cols-12 w-full min-h-screen"> 
+    <div class="row-span-full col-span-full flex flex-col"
+      id="content">
+      <div class="bg-neutral-50 dark:bg-slate-800 px-2 sm:px-4 py-2.5 z-50" 
+        id="nav">      
+        <div class="container flex flex-wrap justify-between mx-auto xl:mb-2 lg:mb:2">                  
+          <div class="flex flex-row">
+            <div> 
+              <img src="dist/logo.png" 
+                alt="..." 
+                class="shadow-lg rounded-full max-w-[30px] h-auto m-auto border-none"/>
+            </div>
+            <div class="text-center pl-3 pt-2 flex-grow text-[12px] dark:text-white">
+              Your Logo
+            </div>
+          </div>                
+
+          <div class="flex items-center ml-auto gap-6">          
+            <button type="button"
+              class="flex flex-col items-center focus:text-indigo-400 focus:outline-none dark:text-slate-200 hover:text-indigo-400 focus:dark:text-indigo-400 hover:dark:text-indigo-400"
+              id="theme-mode"
+              tabindex="2">
+              <i class="fa fa-moon"></i>
+              <span class="text-[10px]">Mode</span>
+            </button>          
+
+            <div class="group inline-block relative">
+              <button type="button" 
+                class="flex flex-col ml-3 text-sm md:mr-0 items-center focus:outline-none focus:text-indigo-400 dark:text-slate-200 hover:text-indigo-400 focus:dark:text-indigo-400 hover:dark:text-indigo-400"
+                id="nav-menu"           
+                tabindex="3">
+                <span class="sr-only">
+                  Menu
+                </span>
+                <img class="w-5 h-5 rounded-full" 
+                  src="dist/profil.png" 
+                  alt="profil">
+                <span class="text-[10px]">
+                  Liton Inot
+                </span>
+              </button>
+          
+              <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 group-hover:block absolute right-0 top-[30px]"                         
+                id="nav-dropdown">
+                <div class="py-3 px-4">
+                  <span class="block text-[12px] text-gray-900 dark:text-white">
+                    Litoninot
+                  </span>
+                  <span class="block text-[12px] font-medium text-gray-500 truncate dark:text-gray-400">
+                    litoninot@gmail.com
+                  </span>
+                </div>
+                <ul class="py-1">
+                  <li>
+                    <a href="#" 
+                      class="block py-2 px-4 text-[12px] text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:bg-gray-100 focus:dark:bg-gray-600"
+                      tabindex="4">
+                      Profil
+                    </a>
+                  </li>                   
+                  <li>
+                    <a href="#" 
+                      class="block py-2 px-4 text-[12px] text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:bg-gray-100 focus:dark:bg-gray-600"
+                      tabindex="5">
+                      Sign out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>           
+
+            <button         
+              type="button" 
+              class="flex flex-col items-center focus:text-indigo-400 focus:outline-none dark:text-slate-200 hover:text-indigo-400 focus:dark:text-indigo-400 hover:dark:text-indigo-400 md:hidden"
+              id="mobile-menu">           
+              <i class="fa fa-align-right fa-1x cursor-pointer"></i>
+              <span class="text-[10px]">
+                Menu
+              </span>
+            </button> 
+          </div>
+        </div>
+
+        <hr class="border-1 border-gray-200 dark:border-gray-700 hidden xl:block lg:block" />
+
+        <ul class="flex flex-row container mx-auto flex-wrap mt-2 hidden xl:flex lg:flex"
+          id="navbar">             
+          <li
+            class="group">
+            <a href="#" 
+              class="py-2 px-4 min-w-[100px] text-slate-500 block  hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 focus:dark:bg-gray-600 focus:bg-gray-200 outline-none">        
+              <i class="fa fa-home text-icon"></i>
+              <span class="text-title text-[12px]">
+                Home
+              </span>              
+            </a>
+          
+            <ul class="hidden absolute top-[110px] bg-white shadow-lg group-hover:block child-menu">
+                <li class="mt-2 mb-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Stock Mutasi
+                  </a>
+                </li>      
+                <li class="mt-2 mb-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Kirim Barang Ke Produksi
+                  </a>
+                </li> 
+            </ul>
+          </li> 
+
+          <li
+            class="group">
+            <a href="#" 
+              class="py-2 px-4 min-w-[100px] text-slate-500 block  hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 focus:dark:bg-gray-600 focus:bg-gray-200 outline-none">        
+              <i class="fa fa-dollar-sign"></i>
+              <span class="text-[12px]">
+                Pembelian
+              </span>              
+            </a>
+          
+            <ul class="hidden absolute top-[110px] bg-white shadow-lg group-hover:block child-menu">
+                <li class="mt-2 mb-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Stock Mutasi
+                  </a>
+                </li>      
+                <li class="mt-2 mb-2">
+                  <a href="#" class="block py-2 px-7 text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white focus:outline-none focus:dark:bg-gray-600 focus:bg-gray-200 text-[12px]">            
+                    Kirim Barang Ke Produksi
+                  </a>
+                </li> 
+            </ul>
+          </li> 
+        
+          <li>
+            <a href="#" 
+              class="py-2 px-4 min-w-[100px] text-slate-500 block  hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 focus:dark:bg-gray-600 focus:bg-gray-200 outline-none">        
+              <i class="fa fa-box"></i>
+              <span class="text-[12px]">
+                Product
+              </span>              
+            </a>                  
+          </li>         
+
+          <li>
+            <a href="#" 
+              class="py-2 px-4 min-w-[100px] text-slate-500 block  hover:bg-gray-200 dark:hover:bg-gray-600 dark:text-gray-200 focus:dark:bg-gray-600 focus:bg-gray-200 outline-none">        
+              <i class="fa fa-users"></i>
+              <span class="text-[12px]">
+                User
+              </span>              
+            </a>                  
+          </li>                   
+        </ul>
+      </div> 
+
+      <div class="bg-slate-100 flex-grow p-5 dark:bg-slate-800"
+        id="body">
+        <div class="w-auto bg-white rounded p-5 dark:bg-slate-900 dark:text-white">         
+          Testing
+        </div>
+      </div>
+    </div>  
+  </div>
+
+ <script>
+    document.getElementById("mobile-menu").addEventListener("click",function(event){
+      let mobileMenu = document.getElementById("mobile-menu");
+            
+      let navbar = document.getElementById("navbar");
+
+      if(!navbar.classList.contains('hidden')){
+        navbar.classList.add('hidden','flex-row');
+        navbar.classList.remove('flex-col');        
+
+        let childMenus = navbar.querySelectorAll(".child-menu");
+
+        Array.from(childMenus).forEach(function(element){
+          element.classList.add("absolute","shadow-lg");
+        })
+
+        let menuIcons = mobileMenu.getElementsByClassName('fa-x');
+
+        if(menuIcons.length){
+          menuIcons[0].classList.add('fa-align-right');
+          menuIcons[0].classList.remove('fa-x');
+        }
+      }else{        
+        navbar.classList.add('flex-col');
+        navbar.classList.remove('hidden','flex-row');
+
+        let childMenus = navbar.querySelectorAll(".child-menu");
+
+        Array.from(childMenus).forEach(function(element){
+          element.classList.remove("absolute","shadow-lg");
+        })
+
+        let menuIcons = mobileMenu.getElementsByClassName('fa-align-right');
+
+        if(menuIcons.length){
+          menuIcons[0].classList.add('fa-x');
+          menuIcons[0].classList.remove('fa-align-right');
+        }
+        
+      }      
+    });
+
+    document.getElementById("theme-mode").addEventListener("click",function(event){
+      let themeMode = document.getElementById("theme-mode");
+      let icon = themeMode.firstElementChild;
+
+      if(icon.classList.contains('fa-moon')){
+        localStorage.setItem("theme",'light');
+
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        
+        document.documentElement.classList.remove('dark')
+      }else{
+        localStorage.setItem('theme','dark');
+
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+
+        document.documentElement.classList.add('dark')
+      }
+    });  
+ </script>
+
+  <script>  
+    if (
+      localStorage.theme === 'dark' ||
+      (
+        !('theme' in localStorage) && 
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      )
+    ){
+        document.documentElement.classList.add('dark')
+
+        let themeMode = document.getElementById("theme-mode");
+        let icon = themeMode.firstElementChild;
+
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }else{
+        document.documentElement.classList.remove('dark')   
+
+        let themeMode = document.getElementById("theme-mode");                        
+        let icon = themeMode.firstElementChild;
+
+        icon.classList.add('fa-sun');
+        icon.classList.remove('fa-moon');
+    }
+  </script>
+
+  <script src="dist/all.min.js"></script>
+</body>
+</html>
